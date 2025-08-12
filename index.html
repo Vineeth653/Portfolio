@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow p-4 fixed w-full">
+    <div class="container mx-auto flex justify-between">
+      <a href="#" class="text-xl font-bold">Your Name</a>
+      <div class="space-x-4">
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#resume" class="hover:text-blue-600">Resume</a>
+        <a href="#portfolio" class="hover:text-blue-600">Portfolio</a>
+        <a href="#blog" class="hover:text-blue-600">Blog</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-24 text-center py-20 bg-gradient-to-b from-blue-600 to-blue-400 text-white mb-12">
+    <h1 class="text-5xl font-extrabold mb-4">Your Name</h1>
+    <p class="text-xl mb-6">[Your Tagline or Role]</p>
+    <div class="space-x-4">
+      <a href="#contact" class="px-6 py-2 bg-white text-blue-600 rounded-md hover:bg-gray-200">Contact Me</a>
+      <a href="#portfolio" class="px-6 py-2 border border-white rounded-md hover:bg-white hover:text-blue-600">My Work</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="container mx-auto p-6 bg-white shadow rounded mb-8">
+    <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+    <p class="text-gray-700">Write a friendly intro about yourself here—who you are, what you do, what drives you.</p>
+  </section>
+
+  <!-- What I'm Doing / Services -->
+  <section class="container mx-auto p-6 mb-8">
+    <h2 class="text-2xl font-semibold mb-4">What I Do</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Example card -->
+      <div class="bg-white p-4 rounded-lg shadow text-center">
+        <div class="mb-2">
+          <!-- optional icon -->
+          <img src="YOUR_ICON_URL" alt="Icon" class="w-12 h-12 mx-auto">
+        </div>
+        <h3 class="font-bold">Mobile Apps</h3>
+        <p class="text-sm">Development of Android & iOS apps with Flutter (or your stack).</p>
+      </div>
+      <!-- Repeat similar cards: Web Dev, UI/UX, Backend, etc. -->
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="container mx-auto p-6 bg-white shadow rounded mb-8">
+    <h2 class="text-2xl font-semibold mb-4">Portfolio</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Example project card -->
+      <div class="bg-gray-50 rounded-lg overflow-hidden shadow">
+        <img src="PROJECT_IMAGE_URL" alt="Project Name" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold">Project Title</h3>
+          <p class="text-sm text-gray-600 mb-2">Short description of the project.</p>
+          <a href="#" class="text-blue-600 hover:underline">View on GitHub</a>
+        </div>
+      </div>
+      <!-- Add more project cards as needed -->
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog" class="container mx-auto p-6 mb-8">
+    <h2 class="text-2xl font-semibold mb-4">Blog</h2>
+    <div class="space-y-4">
+      <!-- Example blog post -->
+      <div class="bg-white p-4 shadow rounded">
+        <h3 class="font-bold">Blog Title</h3>
+        <p class="text-sm text-gray-600">Short snippet or summary.</p>
+        <a href="#" class="text-blue-600 hover:underline">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container mx-auto p-6 bg-white shadow rounded mb-8">
+    <h2 class="text-2xl font-semibold mb-4">Contact Me</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 border rounded">
+      <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 border rounded">
+      <textarea name="message" rows="4" placeholder="Your Message" required class="w-full p-2 border rounded"></textarea>
+      <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Send Message</button>
+    </form>
+    <div class="mt-4 text-gray-600">
+      <p>Email: you@example.com</p>
+      <p>LinkedIn • GitHub • Medium (link icons or text here)</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center p-4 bg-gray-200">
+    <p>© 2025 Your Name. Built with ❤️.</p>
+  </footer>
+
+</body>
+</html>
