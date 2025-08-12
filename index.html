@@ -2,55 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vineeth K Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-100 text-gray-900">
 
-  <!-- Navbar -->
-  <nav class="flex space-x-6 p-4 bg-gray-900 text-white">
-    <a href="index.html" class="hover:text-yellow-400">Home</a>
-    <a href="resume.html" class="hover:text-yellow-400">Resume</a>
-    <a href="contact.html" class="hover:text-yellow-400">Contact Me</a>
-  </nav>
+  <!-- Topbar Placeholder -->
+  <div id="topbar"></div>
 
-  <!-- Hero Section -->
-  <section class="pt-24 text-center py-20 bg-gradient-to-b from-blue-600 to-blue-400 text-white mb-12">
-    <h1 class="text-5xl font-extrabold mb-4">Vineeth K</h1>
-    <p class="text-xl mb-6">DevOps & DevSecOps Engineer</p>
-    <div class="space-x-4">
-      <a href="#contact" class="px-6 py-2 bg-white text-blue-600 rounded-md hover:bg-gray-200">Contact Me</a>
-      <a href="#portfolio" class="px-6 py-2 border border-white rounded-md hover:bg-white hover:text-blue-600">My Works</a>
-    </div>
-  </section>
+  <!-- Container: Sidebar + Main Content -->
+  <div class="flex min-h-screen">
 
-  <!-- About -->
-  <section id="about-me" class="p-8">
-    <h1 class="text-3xl font-bold">About Me</h1>
-    <p class="mt-2 text-gray-700">A passionate DevOps and Security enthusiast with a knack for solving problems at the intersection of development and operations. I enjoy building efficient CI/CD pipelines, securing applications from the ground up, and exploring how automation can make systems more reliable and scalable.<br>
-        Over the years, I’ve worked with diverse technologies across cloud, backend, and infrastructure, and I’m always eager to learn something new. Whether it’s fine-tuning a deployment, integrating security into workflows, or experimenting with new frameworks, I approach every project with curiosity and attention to detail.<br>
-        When I’m not deep into code or configuration files, you’ll probably find me brainstorming ideas for side projects, learning emerging tech, or sharing insights that can help others in the community.
-    </p>
-  </section>
+  <!-- Sidebar Placeholder -->
+  <div id="sidebar"></div>
 
-  <!-- What I'm Doing / Services -->
-  <section id="what-i-do" class="p-8 bg-gray-100">
-    <h2 class="text-2xl font-bold">What I Do</h2>
-    <p class="mt-2 text-gray-700">[Short description of services/skills]</p>
-  </section>
+  <!-- Main Content -->
+  <main class="flex-1 p-8">
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold mb-4">About Me</h2>
+      <p>
+          A passionate DevOps and Security enthusiast with a knack for solving problems at the intersection of development and operations. I enjoy building efficient CI/CD pipelines, securing applications from the ground up, and exploring how automation can make systems more reliable and scalable.<br>
+          Over the years, I’ve worked with diverse technologies across cloud, backend, and infrastructure, and I’m always eager to learn something new. Whether it’s fine-tuning a deployment, integrating security into workflows, or experimenting with new frameworks, I approach every project with curiosity and attention to detail.<br>
+          When I’m not deep into code or configuration files, you’ll probably find me brainstorming ideas for side projects, learning emerging tech, or sharing insights that can help others in the community.<br>
+      </p>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="p-8">
-    <h2 class="text-2xl font-bold">Contact</h2>
-    <p>Email: vineethk77v@gmail.com.com</p>
-    <p>Phone: +91-7902332307</p>
-  </section>
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold mb-4">What I Do</h2>
+      <p>
+        I specialize in [your skills]. My focus is on creating user-friendly,
+        high-performance applications that make an impact.
+      </p>
+    </section>
+     
+  </main>
+  </div>
 
-  <!-- Footer -->
-  <footer class="text-center p-4 bg-gray-200">
-    <p>© 2025 Vineeth K. Built with ❤️.</p>
-  </footer>
+  <!-- Load Sidebar & Topbar -->
+  <script>
+    fetch('sidebar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('sidebar').innerHTML = data;
+      });
+
+    fetch('topbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('topbar').innerHTML = data;
+      });
+  </script>
 
 </body>
 </html>

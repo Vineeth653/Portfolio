@@ -7,25 +7,49 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-  <nav class="flex space-x-6 p-4 bg-gray-900 text-white">
-    <a href="index.html">Home</a>
-    <a href="resume.html" class="text-yellow-400">Resume</a>
-    <a href="contact.html">Contact Me</a>
-  </nav>
+    
+    <!-- Topbar Placeholder -->
+    <div id="topbar"></div>
 
-  <section id="contact" class="container mx-auto p-6 bg-white shadow rounded mb-8">
-    <h2 class="text-2xl font-semibold mb-4">Contact Me</h2>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
-      <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 border rounded">
-      <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 border rounded">
-      <textarea name="message" rows="4" placeholder="Your Message" required class="w-full p-2 border rounded"></textarea>
-      <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Send Message</button>
-    </form>
-    <div class="mt-4 text-gray-600">
-      <p>Email: vineethk77v@gmail.com</p>
-      <p>LinkedIn • GitHub • Medium (link icons or text here)</p>
+    <!-- Container: Sidebar + Main Content -->
+    <div class="flex min-h-screen">
+  
+      <!-- Sidebar Placeholder -->
+      <div id="sidebar"></div>
+  
+      <!-- Main Content -->
+      <main class="flex-1 p-8">
+        <section id="contact" class="container mx-auto p-6 bg-white shadow rounded mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Contact Me</h2>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
+              <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 border rounded">
+              <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 border rounded">
+              <textarea name="message" rows="4" placeholder="Your Message" required class="w-full p-2 border rounded"></textarea>
+              <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Send Message</button>
+            </form>
+            <div class="mt-4 text-gray-600">
+              <p>Email: vineethk77v@gmail.com</p>
+              <p>LinkedIn • GitHub • Medium (link icons or text here)</p>
+            </div>
+          </section>
+        
+      </main>
     </div>
-  </section>
+  
+    <!-- Load Sidebar & Topbar -->
+    <script>
+      fetch('sidebar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('sidebar').innerHTML = data;
+        });
+  
+      fetch('topbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('topbar').innerHTML = data;
+        });
+    </script>
 
 </body>
 </html>
