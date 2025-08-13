@@ -3,62 +3,200 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Portfolio - Vineeth K</title>
+  
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/my-avatar.png" type="image/x-icon">
 
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css1/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body>
 
-  <!-- Topbar Placeholder -->
-  <div id="topbar"></div>
+    <!-- Main Content -->
+    <main>
+      <!-- Sidebar Placeholder -->
+      <div id="sidebar-container"></div>
 
-  <!-- Container: Sidebar + Main Content -->
-  <div class="flex min-h-screen">
+        <div class="main-content">
 
-  <!-- Sidebar Placeholder -->
-  <div id="sidebar"></div>
+          <!-- Topbar Placeholder -->
+          <div id="topbar-container"></div>
 
-  <!-- Main Content -->
-  <main class="flex-1 p-8">
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold mb-4">About Me</h2>
-      <p>
-          A passionate DevOps and Security enthusiast with a knack for solving problems at the intersection of development and operations. I enjoy building efficient CI/CD pipelines, securing applications from the ground up, and exploring how automation can make systems more reliable and scalable.<br>
-          Over the years, I’ve worked with diverse technologies across cloud, backend, and infrastructure, and I’m always eager to learn something new. Whether it’s fine-tuning a deployment, integrating security into workflows, or experimenting with new frameworks, I approach every project with curiosity and attention to detail.<br>
-          When I’m not deep into code or configuration files, you’ll probably find me brainstorming ideas for side projects, learning emerging tech, or sharing insights that can help others in the community.<br>
-      </p>
-    </section>
+          <!--
+            - #ABOUT
+          -->
 
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold mb-4">What I Do</h2>
-      <p>
-        I specialize in [your skills]. My focus is on creating user-friendly,
-        high-performance applications that make an impact.
-      </p>
-    </section>
-     
-  </main>
-  </div>
+          
+            <header>
+              <h2 class="h2 article-title">About me</h2>
+            </header>
 
-  <!-- Load Sidebar & Topbar -->
-  <script>
-    fetch('sidebar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('sidebar').innerHTML = data;
-      });
+            <section class="about-text">
+              <p>
+                A passionate DevOps and Security enthusiast with a knack for solving problems at the intersection of development and operations. I enjoy building efficient CI/CD pipelines, securing applications from the ground up, and exploring how automation can make systems more reliable and scalable.<br>
+              </p>
+              <p>
+                Over the years, I’ve worked with diverse technologies across cloud, backend, and infrastructure, and I’m always eager to learn something new. Whether it’s fine-tuning a deployment, integrating security into workflows, or experimenting with new frameworks, I approach every project with curiosity and attention to detail.<br>
+              </p>
+              <p>
+                When I’m not deep into code or configuration files, you’ll probably find me brainstorming ideas for side projects, learning emerging tech, or sharing insights that can help others in the community.<br>
+            </p>
+            </section>
 
-    fetch('topbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('topbar').innerHTML = data;
-      });
-  </script>
 
-</body>
+            <!--
+              - service
+            -->
+
+            <section class="service">
+
+              <h3 class="h3 service-title">What i'm doing</h3>
+
+              <ul class="service-list">
+
+                <li class="service-item">
+
+                  <div class="service-icon-box">
+                    <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+                  </div>
+
+                  <div class="service-content-box">
+                    <h4 class="h4 service-item-title">DevOps</h4>
+
+                    <p class="service-item-text">
+                      Built and maintained automated CI/CD pipelines, streamlined deployments, and managed Linux-based infrastructure for reliable, scalable delivery.
+                    </p>
+                  </div>
+
+                </li>
+                
+                <li class="service-item">
+
+                  <div class="service-icon-box">
+                    <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+                  </div>
+
+                  <div class="service-content-box">
+                    <h4 class="h4 service-item-title">DevSecOps</h4>
+
+                    <p class="service-item-text">
+                      Integrated security tools into CI/CD workflows, automated vulnerability detection, and enforced secure SDLC practices without slowing delivery.                </p>
+                  </div>
+
+                </li>
+
+                <li class="service-item">
+
+                  <div class="service-icon-box">
+                    <img src="./assets/images/icon-design.svg
+                    " alt="design icon" width="40">
+                  </div>
+
+                  <div class="service-content-box">
+                    <h4 class="h4 service-item-title">Application Security</h4>
+
+                    <p class="service-item-text">
+                      Conducted SAST/DAST assessments, developed custom security scripts, and collaborated with teams to remediate vulnerabilities in line with OWASP guidelines.
+                    </p>
+                  </div>
+
+                </li>
+
+                <li class="service-item">
+
+                  <div class="service-icon-box">
+                    <img src="./assets/images/icon-backend.svg" alt="camera icon" width="40">
+                  </div>
+
+                  <div class="service-content-box">
+                    <h4 class="h4 service-item-title">Linux Administration</h4>
+
+                    <p class="service-item-text">
+                      Automated server monitoring, deployment readiness checks, and configuration management, improving uptime and reducing manual intervention.
+                    </p>
+                  </div>
+
+                </li>
+
+              </ul>
+
+            </section>
+
+            <!--
+              - clients
+            -->
+
+            <section class="clients">
+
+              <h3 class="h3 clients-title">Skills</h3>
+
+              <ul class="clients-list has-scrollbar">
+
+                <li class="clients-item">
+                  <a href="https://dart.dev/" target="_blank">
+                    <img src="./assets/skills/Dart.svg" alt="client logo" style="filter: none;">
+                  </a>
+                </li>
+
+                <li class="clients-item">
+                  <a href="https://flutter.dev/" target="_blank">
+                    <img src="./assets\skills\Flutter.svg" alt="client logo" >
+                  </a>
+                </li>
+
+                <li class="clients-item">
+                  <a href="https://firebase.google.com/" target="_blank">
+                    <img src="./assets\skills\Firebase.svg" alt="client logo" >
+                  </a>
+                </li>
+
+
+                <li class="clients-item">
+                  <a href="https://www.postman.com/" target="_blank">
+                    <img src="./assets/skills/Postman.svg" alt="client logo" >
+                  </a>
+                </li>
+
+                <li class="clients-item">
+                  <a href="https://www.figma.com/" target="_blank">
+                    <img src="./assets/skills/Figma.svg" alt="client logo" >
+                  </a>
+                </li>
+
+                <li class="clients-item">
+                  <a href="https://developer.android.com/studio" target="_blank">
+                    <img src="./assets/skills/AndroidStudio.svg" alt="client logo" >
+                  </a>
+                </li>
+
+                <li class="clients-item">
+                  <a href="https://developer.apple.com/xcode/" target="_blank">
+                    <img src="./assets/skills/Xcode.svg" alt="client logo" >
+                  </a>
+                </li>
+
+            </section>
+
+        </div>
+      
+    </main>
+    <!--
+      - custom js link
+    --> 
+    <script src="./assets/js/script.js"></script>
+  
+  </body>
 </html>

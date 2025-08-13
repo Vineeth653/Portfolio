@@ -4,43 +4,111 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume - Your Name</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/my-avatar.png" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
-  
-    <!-- Topbar Placeholder -->
-  <div id="topbar"></div>
 
-  <!-- Container: Sidebar + Main Content -->
-  <div class="flex min-h-screen">
-
+  <!-- Main Content -->
+  <main>
     <!-- Sidebar Placeholder -->
-    <div id="sidebar"></div>
+    <div id="sidebar-container"></div>
 
-    <!-- Main Content -->
-    <main class="flex-1 p-8">
-        <section class="p-8">
-            <h1 class="text-3xl font-bold">My Resume</h1>
-            <p class="mt-4">[Insert PDF download link or resume content here]</p>
-          </section>
+      <div class="main-content">
+
+        <!-- Topbar Placeholder -->
+        <div id="topbar-container"></div>
+
+        <!--
+          - #RESUME
+        -->
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Musaliar College of Engineering and Technology, Pathanamthitta</h4>
+              <p class="timeline-text">Bachelor of Technology in Computer Science and Engineering (B.Tech CSE)</p>
+              <span>2018 — 2022</span>
+            </li>
+
+          </ol>
+
+        </section>
+
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Experience</h3>
+          </div>
+        
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Assistant System Engineer - DevOps and DevSecOps</h4>
+              <p class="timeline-text">Tata Consultancy and Services</p>
+              <span data-start-date="2023-06-08" data-end-date="2025-04-15">June, 2023 — April, 2025 &nbsp; &#8226; <span class="duration"></span>
+              <p class="timeline-text"><i>Bhubaneswar, Odisha, India</i></p>
+              <ul class="timeline-text">
+                <li>Built secure, automated CI/CD pipelines using Jenkins for multiple applications.</li>
+                <li>Managed Linux server administration, deployment automation, and system health monitoring.</li>
+                <li>Implemented HashiCorp Vault for dynamic secrets management across 17+ Jenkins jobs.</li>
+                <li>Performed manual DAST using Burp Suite and ZAP to find logic flaws.</li>
+                <li>Developed custom scripts to detect outdated internal dependencies and block insecure builds.</li>
+                <li>Automated pre- and post-deployment checks for performance test readiness.</li>
+                <li>Reduced manual security workload by 50% through Bash and Python automation.</li>
+                <li>Collaborated with Dev, QA, and audit teams to triage vulnerabilities and ensure compliance.</li>
+                <li>Acted as interim team lead, coordinating security scans and remediation efforts.</li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+        
+
+        <button class="form-btn" type="button" data-form-btn onclick="window.open('./assets/cv/flutter_aakash.pdf')">
+          <ion-icon name="document-text-outline"></ion-icon>
+          <span>Download CV</span>
+        </button>
+
+      </div>
       
     </main>
-  </div>
-
-  <!-- Load Sidebar & Topbar -->
-  <script>
-    fetch('sidebar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('sidebar').innerHTML = data;
-      });
-
-    fetch('topbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('topbar').innerHTML = data;
-      });
-  </script>
+    <!--
+      - custom js link
+    -->  
+  
+    <script src="./assets/js/script.js"></script>
+  
 
 </body>
 </html>
