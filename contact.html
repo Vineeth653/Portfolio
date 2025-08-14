@@ -38,41 +38,38 @@
         <!--
           - #CONTACT
         -->
+        <article class="contact  active" data-page="contact">
+          <header>
+            <h2 class="h2 article-title">Contact</h2>
+          </header>
+          
+          <!-- contact form -->
 
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-        
-        <!-- contact form -->
+          <section class="contact-form">
+            <h3 class="h3 form-title">Contact Form</h3>
+          
+            <form action="https://api.web3forms.com/submit" method="POST" class="form" data-form>
+              <input type="hidden" name="access_key" value="45f682f3-34be-4298-a7ce-cba2424d2804">
+              <input type="hidden" name="from_name" value="Portfolio">
+          
+              <div class="input-wrapper">
+                <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+                <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              </div>
+          
+              <input type="text" name="subject" class="form-input" placeholder="Subject" required data-form-input>
+          
+              <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+          
+              <button class="form-btn" type="submit"  data-form-btn>
+                <ion-icon name="paper-plane"></ion-icon>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </section>
 
-        <section class="contact-form">
-          <h3 class="h3 form-title">Contact Form</h3>
-        
-          <form action="https://api.web3forms.com/submit" method="POST" class="form" data-form>
-            <input type="hidden" name="access_key" value="45f682f3-34be-4298-a7ce-cba2424d2804">
-            <input type="hidden" name="from_name" value="Portfolio">
-        
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-        
-            <input type="text" name="subject" class="form-input" placeholder="Subject" required data-form-input>
-        
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-        
-            <button class="form-btn" type="submit"  data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-          </form>
-        </section>
-
-        <div id="toast" class="toast"></div>
-
-        <!--
-          <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>   
-        -->           
+        </article>
+                   
       </div>
     </main>
     <!--
