@@ -1,30 +1,43 @@
 'use strict';
 
-// Sidebar & Topbar Loaders
+// assets/js/script.js
+document.addEventListener("DOMContentLoaded", () => {
+  // Helper to inject HTML into a container by id
+  const inject = (url, containerId) =>
+    fetch(url)
+      .then(r => {
+        if (!r.ok) throw new Error(`Failed to load ${url} (${r.status})`);
+        return r.text();
+      })
+      .then(html => {
+        const container = document.getElementById(containerId);
+        if (container) container.innerHTML = html;
+      });
 
-fetch('sidebar.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('sidebar-container').innerHTML = data;
+  // 1) Load sidebar & topbar first
+  Promise.all([
+    inject("sidebar.html", "sidebar-container"),
+    inject("topbar.html", "topbar-container")
+  ])
+  .then(() => {
+    // 2) After injection, set up the mobile toggle (delegated)
+    const sidebar = document.querySelector("[data-sidebar]");
+
+    // If your toggle button lives inside the injected topbar or sidebar,
+    // this delegated listener will still catch it.
+    document.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-sidebar-btn]");
+      if (!btn) return;
+      if (!sidebar) return; // safety
+      sidebar.classList.toggle("active");
+    });
+
+    // Optional: quick sanity logs while testing
+    // console.log("Sidebar found:", !!sidebar);
+  })
+  .catch(err => {
+    console.error(err);
   });
-
-fetch('topbar.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('topbar-container').innerHTML = data;
-  });
-
-
-// Sidebar Toggle
-
-const elementToggleFunc = function (elem) { 
-  elem.classList.toggle("active"); 
-};
-
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-sidebarBtn.addEventListener("click", function () { 
-  elementToggleFunc(sidebar); 
 });
 
 
